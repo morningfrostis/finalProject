@@ -21,6 +21,46 @@ return list
 
 
 async function getBooks() {
+    fetch('https://api.nytimes.com/svc/books/v3/lists/current/Science.json?api-key=zDcNYZLAAAyz53sPI5rfz9DJnND9qEpO')
+    .then((response) => response.json())
+    .then ((data) => {display(data)})
+    .catch (err=>console.log(err))
+
+    function display(data) {
+
+        for ( i=0;i<10;i++){
+       // Declaramos los elementos del libro
+        let img= document.createElement("img");
+        img.src = `${data.results.books[i].book_image}`;
+        let rank = document.createElement("rank");
+        rank.innerHTML=`RANK : ${data.results.books[i].rank}`
+        let name = document.createElement("name");
+        name.innerHTML=`${data.results.books[i].title}`
+        let author = document.createElement("author");
+        author.innerHTML=`AUTHOR : ${data.results.books[i].author}`
+        let publisher = document.createElement("publisher");
+        publisher.innerHTML=`PUBLISHER : ${data.results.books[i].publisher}`
+        let amazon = document.createElement('a');
+        let link = data.results.books[i].amazon_product_url;
+        amazon.setAttribute("href", link);
+        amazon.innerHTML = "Buy From Amazon";
+
+        // Agrego los elementos del libro al Card
+        document.getElementById('book-card').appendChild(amazon)
+        document.getElementById('book-card').appendChild(publisher)
+        document.getElementById('book-card').appendChild(author)
+        document.getElementById('book-card').appendChild(name)
+        document.getElementById('book-card').appendChild(rank) 
+        document.getElementById('book-card').appendChild(img) 
+    
+        }
+    
+    }
+    }
+
+
+/****vamos a probar la función getBooks de otra manera (domingo 2.58 de la madrugada)*****/
+/*async function getBooks() {
     //console.log(listName);
     localStorage.clear();
     const prevValues = localStorage.getItem(localStorageListKey)
@@ -41,7 +81,10 @@ async function getBooks() {
     }
 //alert(list.list_name);
     return list;
-    }
+    }*/
+
+
+
 
     /*const getBooks = async () => {
         //console.log()
