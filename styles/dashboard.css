@@ -8,37 +8,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	background: #ffffff;
 	color: #1d1d1d;
-  padding: 50px;
 }
-
-header {
-    padding-left: 25px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid #aaaaaa;
-}
-h1{
-    font-size: 2em;
-    font-family: namata medium; 
-    padding-top: 10px;
-    font-weight: bolder;
-}
-.r{
-    font-size: 0.3em;
-}
-
-.best{
-    background-color: black;
-    max-width: 50%;
-}
-
-.sellers{
-    text-align: right;
-    padding-right: 15px;
-    font-size: 80px;
-    font-family: impact;
-    color: white;
-}
-
 
 .container {
 	width: 90%;
@@ -48,15 +18,6 @@ h1{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 40px;
-}
-.modulo {
-    flex-direction: column;
-    width: 22%;
-    height: 250px;
-    margin: 1%;
-    background-color: rgb(255, 255, 255);
-    border-style:outset;
-
 }
 .boxes {
     height: 250px;
@@ -79,35 +40,6 @@ h1{
     padding-bottom: 20px;
     }
 }
-@media (max-width: 768px) {
-    body {
-        padding: 15px;
-    }
-
-    header {
-        margin-left: 0;
-    }
-
-    .best {
-        max-width: 100%;
-    }
-
-    .sellers {
-        font-size: 42px;
-    }
-}
-
-@media (max-width: 1024px) {
-    body {
-        padding: 15px;
-    }
-
-    header {
-        margin-left: 0;
-    }
-
-
-    .sellers {
-        font-size: 64px;
-    }
+.r{
+    font-size: 20px;
 }
