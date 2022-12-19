@@ -15,6 +15,10 @@ h1{
     font-weight: bolder;
 }
 
+.sellers{
+    font-size: 10px;
+}
+
 .best{
     background-color: black;
     max-width: 50%;
