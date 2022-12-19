@@ -20,7 +20,7 @@ return list
 }
 
 
-async function getBooks() {
+/*async function getBooks() {
     fetch('https://api.nytimes.com/svc/books/v3/lists/current/Science.json?api-key=zDcNYZLAAAyz53sPI5rfz9DJnND9qEpO')
     .then((response) => response.json())
     .then ((data) => {display(data)})
@@ -56,7 +56,7 @@ async function getBooks() {
         }
     
     }
-    }
+    }*/
 
 
 /****vamos a probar la función getBooks de otra manera (domingo 2.58 de la madrugada)*****/
